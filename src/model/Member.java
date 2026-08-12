@@ -41,11 +41,8 @@ public class Member {
 	@Override
 	
 	public String toString() {
-		return "Member{" + 
-	            "memberId='" + memberId + '\'' +
-	            ", name= '" + name + '\'' +
-	            ", borrowedBooks=" + borrowedBooks.size() + 
-	            '}';
+		
+	     return "Member: " + name + " (ID: " + memberId + ", Borrowed Books: " + borrowedBooks.size() + ")";
 	}
 	
 	
