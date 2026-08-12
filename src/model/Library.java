@@ -25,13 +25,13 @@ public class Library {
 	
 	public boolean borrowBook(Member member , Book book ) {
 		if(book.isBorrowed()) {
-			System.out.println(book.getTitle() + "is already borrowed");
+			System.out.println(book.getTitle() + " is already borrowed.");
 			return false;
 		}
 		book.setBorrowed(true);
 		member.addBorrowedBook(book);
-		System.out.println(member.getName() + "has not borrowed this book");
-		return false;
+		System.out.println(member.getName() + " borrowed " + book.getTitle() + ".");
+		return true;
 	}
 	
 	public boolean returnBook(Member member, Book book) {
@@ -41,7 +41,7 @@ public class Library {
 		}
 		book.setBorrowed(false);
 		member.removeBorrowedBook(book);
-		System.out.println(member.getName() + "returned" + book.getTitle() + ".");
+		System.out.println(member.getName() + " returned " + book.getTitle() + ".");
 		return true;
 	}
 
